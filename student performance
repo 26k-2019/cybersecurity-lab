@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main()
+{
+    char name[50];
+    int id, completed, totalLabs;
+    float quiz, assignment, project;
+    float completion, totalScore;
+
+    printf("Enter student name: ");
+    scanf("%s", name);
+
+    printf("Enter student ID: ");
+    scanf("%d", &id);
+
+    printf("Enter completed labs: ");
+    scanf("%d", &completed);
+
+    printf("Enter total labs: ");
+    scanf("%d", &totalLabs);
+
+    printf("Enter quiz marks: ");
+    scanf("%f", &quiz);
+
+    printf("Enter assignment marks: ");
+    scanf("%f", &assignment);
+
+    printf("Enter project marks: ");
+    scanf("%f", &project);
+
+    completion = (float)completed / totalLabs * 100;
+    totalScore = quiz + assignment + project;
+
+    printf("\n============================\n");
+    printf("STUDENT PERFORMANCE REPORT\n");
+    printf("============================\n");
+
+    printf("Student Name: %s\n", name);
+    printf("Student ID: %d\n", id);
+    printf("Lab Completion: %.2f%%\n", completion);
+    printf("Total Academic Score: %.2f\n", totalScore);
+
+    return 0;
+}
